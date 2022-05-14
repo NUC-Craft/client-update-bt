@@ -7,6 +7,7 @@ import jsonfile from 'jsonfile';
 
 let version = '';
 
+spawn('rm', ['-r', OUTPUT_DIR])
 spawn('mkdir', ['-p', OUTPUT_DIR])
 spawn('cp', ['-r', TORRENTS_DIR, `${OUTPUT_DIR}/`]);
 
@@ -19,3 +20,4 @@ jsonfile.readFile(META_FILE, (err, jsonData) => {
 })
 
 spawn('cp', [META_FILE, `${OUTPUT_DIR}/`])
+spawn('cp', 'favicon.ico', `${OUTPUT_DIR}/`)
