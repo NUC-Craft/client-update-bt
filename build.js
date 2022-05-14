@@ -20,4 +20,4 @@ jsonfile.readFile(META_FILE, (err, jsonData) => {
 })
 
 spawn('cp', [META_FILE, `${OUTPUT_DIR}/`])
-spawn('cp', 'favicon.ico', `${OUTPUT_DIR}/`)
+spawn('cp', ['favicon.ico', `${OUTPUT_DIR}/`])
