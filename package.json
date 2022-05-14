@@ -1,0 +1,23 @@
+{
+    "name": "client-update-bt",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node build.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NUC-Craft/client-update-bt.git"
+    },
+    "author": "Gaein nidb",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/NUC-Craft/client-update-bt/issues"
+    },
+    "homepage": "https://github.com/NUC-Craft/client-update-bt#readme",
+    "dependencies": {
+        "jsonfile": "^6.1.0"
+    }
+}
