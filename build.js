@@ -15,8 +15,7 @@ jsonfile.readFile(META_FILE, (err, jsonData) => {
 
     version = jsonData['version'];
     console.log(`version: ${version}`)
+    spawn('ln', ['-s', `client-${version}.torrent`, `${OUTPUT_DIR}/latest.torrent`]);
 })
 
-const lasteFileName = `client-${version}.torrent`;
-spawn('ln', ['-s', `${OUTPUT_DIR}/${lasteFileName}`, `${OUTPUT_DIR}/laste.torrent`]);
 spawn('cp', [META_FILE, `${OUTPUT_DIR}/`])
