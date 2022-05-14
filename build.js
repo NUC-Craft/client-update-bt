@@ -6,11 +6,15 @@ import { spawn } from 'child_process';
 import jsonfile from 'jsonfile';
 
 let version = '';
+
 spawn('cp', ['-r', TORRENTS_DIR, OUTPUT_DIR]);
+spawn('mkdir', ['-p', OUTPUT_DIR])
+
 jsonfile.readFile(META_FILE, (err, jsonData) => {
     if (err) throw err;
 
     version = jsonData['version'];
+    console.log(`version: ${version}`)
 })
 
 const lasteFileName = `client-${version}.torrent`;
